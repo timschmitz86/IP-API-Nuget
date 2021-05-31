@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>IP_API</RootNamespace>
+
+    <PackageId>IP-API-Wrapper</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Tim Schmitz</Authors>
+  </PropertyGroup>
+
+</Project>
