@@ -31,7 +31,7 @@ jobs:
       with:
         name: currentPackage
         path: Release/*.nupkg
-    - name: Publish the package to GPR
-      env:
-        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      run: dotnet nuget push Release/*.nupkg
+    # - name: Publish the package to GPR
+    #  env:
+    #    NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    #  run: dotnet nuget push Release/*.nupkg
