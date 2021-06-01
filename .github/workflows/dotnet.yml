@@ -31,20 +31,7 @@ jobs:
       with:
         name: currentPackage
         path: Release/*.nupkg
-    
-  
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-     - name: get package
-       uses: actions/download-artifact@v2
-       with:
-        name: currentPackage
-      #- name: create release in github
-      #  create release with information and artifact
-     - name: Publish the package to GPR
-       env:
-         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-       run: dotnet nuget push /bin/Release/*.nupkg
+    - name: Publish the package to GPR
+      env:
+        NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      run: dotnet nuget push Release/*.nupkg
