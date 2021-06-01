@@ -21,8 +21,29 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore --configuration Release
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Pack
-      run: dotnet pack --no-build
+      run: dotnet pack --no-build --configuration Release
+    - name: save package
+      uses: actions/upload-artifact@v2
+      with:
+        name: currentPackage
+        path: /bin/Release/*.nupkg
+    
+  
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: get package
+       uses: actions/download-artifact@v2
+       with:
+        name: currentPackage
+     - name: create release in github
+      #  create release with information and artifact
+     - name: Publish the package to GPR
+       env:
+         NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+       run: dotnet nuget push /bin/Release/*.nupkg

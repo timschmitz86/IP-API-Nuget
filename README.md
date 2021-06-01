@@ -1,5 +1,7 @@
 # IP-API-Nuget
 
+[![.NET](https://github.com/timschmitz86/IP-API-Nuget/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/timschmitz86/IP-API-Nuget/actions/workflows/dotnet.yml)
+
 Small nuget package written in C#.
 It just enables you to use [IP-API.co](https://IP-API.co) in native C#.
 
