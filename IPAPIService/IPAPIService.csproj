@@ -4,9 +4,13 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>IP_API</RootNamespace>
 
-    <PackageId>IP-API-Wrapper</PackageId>
-    <Version>0.0.1</Version>
+    <PackageId>IPAPI-Wrapper</PackageId>
+    <Version>0.0.2</Version>
     <Authors>Tim Schmitz</Authors>
+    <title>IPAPI-Wrapper</title>
+    <RepositoryUrl>https://github.com/timschmitz86/IP-API-Nuget</RepositoryUrl>
+    <description>Small IPAPI wrapper written in C#. It just enables you to use https://IPAPI.co in native C#.</description>
+    <PackageProjectUrl>https://github.com/timschmitz86/IP-API-Nuget</PackageProjectUrl>
   </PropertyGroup>
 
 </Project>
